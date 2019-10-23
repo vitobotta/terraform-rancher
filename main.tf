@@ -1,5 +1,8 @@
 resource "rancher2_cluster" "cluster" {
   name = "${var.cluster_name}"
+  cluster_auth_endpoint = {
+    enabled = true
+  }
 
   rke_config {
     network {
